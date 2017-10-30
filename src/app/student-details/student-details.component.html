@@ -1,0 +1,30 @@
+<div *ngIf="student!==undefined" class="col-lg-8">
+  <label>
+    Name of Student
+  </label>
+  <input label="name" class="form-control"
+         type="text" value="{{student.name}}"
+         disabled="disabled">
+  <hr>
+  <label>
+    surname of Student
+  </label>
+  <input class="form-control"
+         type="text" value="{{student._surname}}"
+         disabled="disabled">
+  <hr>
+  <label>
+    Index of Student
+  </label>
+  <input class="form-control"
+         type="text" value="{{student._index}}"
+         disabled="disabled">
+  <hr>
+  <label>
+    Module of Student
+  </label>
+  <input class="form-control"
+         type="text" value="{{student._module}}"
+         disabled="disabled">
+
+</div>
