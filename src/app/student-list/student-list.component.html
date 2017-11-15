@@ -1,0 +1,14 @@
+<div class="row">
+  <br>
+  <div class="col-md-3">
+    <div class="list-group">
+
+      <a class="list-group-item"
+         *ngFor="let student of students" routerLink="/detais/{{student._index}}">
+        {{student.name +" "+ student._surname}}
+      </a>
+    </div>
+    <button class="btn btn-success" routerLink="/new">add new Student</button>
+
+  </div>
+</div>

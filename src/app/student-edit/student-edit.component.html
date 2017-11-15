@@ -1,0 +1,106 @@
+<form *ngIf="student!==undefined" [formGroup]="studentedit" #formDir="ngForm" (submit)="onSumbit(studentedit.value)">
+
+
+  <div class="col-lg-8">
+    <div [hidden]="formDir.submitted">
+      <label>
+        Name of Student
+      </label>
+      <input label="name" class="form-control"
+             type="text"
+             formControlName="name" required>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)"
+           class="alert alert-danger">
+
+        <div *ngIf="name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name must be at least 2 characters long.
+        </div>
+        <div *ngIf="name.errors.maxlength">
+          Name size must be less than 30 characters long .
+        </div>
+
+      </div>
+    </div>
+    <hr>
+    <div [hidden]="formDir.submitted">
+      <label>
+        surname of Student
+      </label>
+      <input class="form-control"
+             type="text" formControlName="_surname" required
+      >
+      <div *ngIf="_surname.invalid && ( _surname.dirty ||  _surname.touched)"
+           class="alert alert-danger">
+
+        <div *ngIf=" _surname.errors.required">
+          surname is required.
+        </div>
+        <div *ngIf=" _surname.errors.minlength">
+          surname must be at least 2 characters long.
+        </div>
+        <div *ngIf=" _surname.errors.maxlength">
+          surname size must be less than 30 characters long .
+        </div>
+
+
+      </div>
+    </div>
+    <hr>
+    <div [hidden]="formDir.submitted">
+      <label>
+        Index of Student
+      </label>
+      <input class="form-control"
+             type="text" formControlName="_index" required
+      >
+      <div *ngIf="_index.invalid && ( _index.dirty ||  _index.touched)"
+           class="alert alert-danger">
+
+        <div *ngIf=" _index.errors.required">
+          index is required.
+        </div>
+        <div *ngIf=" _index.errors.minlength">
+          index must be 6 characters long.
+        </div>
+        <div *ngIf=" _index.errors.maxlength">
+          index size must be 6 characters long .
+        </div>
+        <div *ngIf=" _index.errors.max">
+          index must be 6 digit number .
+        </div>
+        <div *ngIf=" _index.errors.min">
+          index must be 6 digit number .
+        </div>
+
+
+      </div>
+
+    </div>
+    <hr>
+    <div [hidden]="formDir.submitted">
+      <label>
+        Module of Student
+      </label>
+      <input class="form-control"
+             type="text" formControlName="_module" required
+      >
+      <div *ngIf="_module.invalid && (_module.dirty || _module.touched)"
+           class="alert alert-danger">
+
+        <div *ngIf="_module.errors.required">
+          module is required
+        </div>
+        <div *ngIf="_module.errors.moduleOfFinki">
+          module must be from FINKI
+        </div>
+
+
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="studentedit.invalid " class="btn btn-submit">Save</button>
+  </div>
+</form>
