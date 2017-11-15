@@ -1,8 +1,8 @@
 <div *ngIf="student!==undefined" class="col-lg-8">
-  <label>
+  <label for="name">
     Name of Student
   </label>
-  <input label="name" class="form-control"
+  <input id="name" label="name" class="form-control"
          type="text" value="{{student.name}}"
          disabled="disabled">
   <hr>
@@ -27,4 +27,5 @@
          type="text" value="{{student._module}}"
          disabled="disabled">
 
+  <button class="btn btn-danger" routerLink="/edit/{{student._index}}">edit</button>
 </div>

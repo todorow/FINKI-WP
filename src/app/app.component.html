@@ -1,23 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="row">
-  <br>
-  <div class="col-md-3">
-    <div class="list-group">
 
-      <a href="#" class="list-group-item"
-         *ngFor="let student of students"
-         (click)="showStudent(student);"
-      > {{student.name +" "+ student._surname}}</a>
+<router-outlet></router-outlet>
 
 
-    </div>
-
-  </div>
 
 
-  <app-student-details [student]="curStudent">
-
-  </app-student-details>
-
-
-</div>
